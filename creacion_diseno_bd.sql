@@ -176,7 +176,7 @@ $BODY$
 LANGUAGE plpgsql;
 
 -- FORMA DE USO DE AUTENTICACIÓN
-select id_usuario, nombre, id_perfil, perfil from autenticacion('zero', 'clave123')
+select id_usuario, nombre, id_perfil, perfil from autenticacion('zero', 'clave123');
 
 -- FUNCION TRIGGER PARA AUDITORÍA DE PRODUCTOS
 CREATE OR REPLACE FUNCTION tg_productos_auditoria()

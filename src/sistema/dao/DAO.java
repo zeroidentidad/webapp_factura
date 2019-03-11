@@ -30,6 +30,7 @@ public class DAO {
         Connection conexion = null;
         String url = "jdbc:postgresql://"+iphost+":"+puerto+"/"+namedb;
         try {
+        	DriverManager.registerDriver(new org.postgresql.Driver());
             conexion = DriverManager.getConnection(url, usuario, contrasena);
         } catch (SQLException sqle) {
             LOG.log(Level.SEVERE, "Ocurrió un error en: {0}", sqle.getMessage());

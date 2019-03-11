@@ -24,7 +24,7 @@ public class CompraDAO {
                         short producto,
                         short cantidad,
                         short valor,
-                        short usuario) throws ExcepcionGeneral, IOException{
+                        short usuario) throws ExcepcionGeneral, IOException {
         short id_compra = 0;
         Connection con = null;
         PreparedStatement ps = null;

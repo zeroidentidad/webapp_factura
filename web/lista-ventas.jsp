@@ -1,7 +1,7 @@
-<%@page import="sistema.modelos.Compra"%>
-<%@page import="sistema.dao.CompraDAO"%>
+<%@page import="sistema.modelos.Venta"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="sistema.dao.VentaDAO"%>
 <%@page import="sistema.modelos.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -23,10 +23,11 @@
         pagina = Short.parseShort((String) request.getParameter("pagina"));
     }
     
-    CompraDAO compraDAO = new CompraDAO();
-    List<Compra> compras = new ArrayList<Compra>();
-    compras = compraDAO.listar(limite, pagina);
+    VentaDAO compraDAO = new VentaDAO();
+    List<Venta> ventas = new ArrayList<Venta>();
+    ventas = compraDAO.listar(limite, pagina);
 %>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -48,7 +49,7 @@
         </ul>
       </aside>
       <main class="main-content">
-        <h1> Listado de compras</h1>
+        <h1> Listado de ventas</h1>
         <table class="listado">
           <thead>
             <tr>
@@ -62,29 +63,29 @@
           </thead>
           <tbody>
               <%
-                  for (Compra compra : compras) {
+                  for (Venta venta : ventas) {
                       out.println("<tr>");
                       out.println("<td>");
-                      out.println(compra.id_compra);
+                      out.println(venta.id_venta);
                       out.println("</td>");
                       out.println("<td>");
-                      out.println(compra.getFecha());
+                      out.println(venta.getFecha());
                       out.println("</td>");
                       out.println("<td>");
-                      out.println(compra.cliente);
+                      out.println(venta.cliente);
                       out.println("</td>");
                       out.println("<td>");
-                      out.println(compra.producto);
+                      out.println(venta.producto);
                       out.println("</td>");
                       out.println("<td>");
-                      out.println(compra.cantidad);
+                      out.println(venta.cantidad);
                       out.println("</td>");
                       out.println("<td>");
-                      out.println(compra.valor);
+                      out.println(venta.valor);
                       out.println("</td>");
                       out.println("</tr>");
-                      sumaCantidad += compra.cantidad;
-                      sumaTotal += compra.valor;
+                      sumaCantidad += venta.cantidad;
+                      sumaTotal += venta.valor;
                   }
               %>
           </tbody>
@@ -96,7 +97,7 @@
             </tr>
           </tfoot>
         </table>
-            <form action="lista-compras.jsp" method="post">
+            <form action="lista-ventas.jsp" method="post">
             <div class="ed-container">
                 <div class="ed-item web-20">
                     <label for="registros">Registros:</label>

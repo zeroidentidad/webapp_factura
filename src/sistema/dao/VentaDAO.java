@@ -24,7 +24,7 @@ public class VentaDAO {
     private ResultSet rs = null;
     
     public short vender(short cliente, short producto,
-                        short cantidad, short usuario) throws ExcepcionGeneral, IOException{
+                        short cantidad, short usuario) throws ExcepcionGeneral, IOException {
         short respuesta = 0;
         try {
             con = DAO.conectar();

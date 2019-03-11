@@ -18,7 +18,7 @@ public class TerceroDAO {
     private static final Logger LOG = Logger.getLogger(TerceroDAO.class.getName());
     private final String CONSULTA = "SELECT id_tercero, nombre FROM consulta_terceros()";
     
-    public List<Tercero> listar() throws IOException, ExcepcionGeneral {
+    public List<Tercero> listar() throws ExcepcionGeneral, IOException {
         List<Tercero> listado = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;

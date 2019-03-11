@@ -18,7 +18,7 @@ public class ProductoDAO {
     private static final Logger LOG = Logger.getLogger(ProductoDAO.class.getName());
     private static final String CONSULTA = "SELECT id_producto, nombre, cantidad, precio FROM consulta_productos()";
 
-    public List<Producto> listar() throws IOException, ExcepcionGeneral {
+    public List<Producto> listar() throws ExcepcionGeneral, IOException {
         List<Producto> listado = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;

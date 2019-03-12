@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scale=1.0"/>
-    <!-- <link rel="stylesheet" href="css/estilos.css"/> -->
+    <link rel="stylesheet" href="./css/estilos.css"/>
     <link href="./css/icons.css" rel="stylesheet"/>
     <title>Sistema</title>
   </head>

@@ -141,7 +141,7 @@ CREATE OR REPLACE FUNCTION consulta_terceros()
 RETURNS SETOF terceros AS
 $BODY$
 BEGIN
-	RETURN QUERY SELECT id_tercero, nombre FROM terceros ORDER BY nombre;
+	RETURN QUERY SELECT id_tercero, identificacion, nombre, direccion, telefono FROM terceros ORDER BY nombre;
 END;
 $BODY$
 LANGUAGE plpgsql;

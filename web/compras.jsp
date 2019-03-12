@@ -37,7 +37,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scale=1.0"/>
-        <link rel="stylesheet" href="css/estilos.css"/>
+        <link rel="stylesheet" href="./css/estilos.css"/>
         <link href="./css/icons.css" rel="stylesheet"/>
         <title>Compras</title>
     </head>
@@ -50,6 +50,7 @@
                     <li class="menu__item"><a href="lista-compras.jsp" class="menu__link icon-lista-compras">Lista de compras</a></li>
                     <li class="menu__item"><a href="lista-ventas.jsp" class="menu__link icon-lista-ventas">Lista de ventas</a></li>
                     <li class="menu__item"><a href="lista-productos.jsp" class="menu__link icon-lista-productos">Lista de productos</a></li>
+                    <li class="menu__item"><a href="salir.jsp" class="menu__link">Salir</a></li>
                 </ul>
             </aside>
             <main class="main-content">
